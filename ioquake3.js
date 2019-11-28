@@ -21793,7 +21793,7 @@ function copyTempDouble(ptr) {
   		var loading = document.createElement('div');
   		loading.id = 'loading';
   		loading.innerHTML = '<div id="loading-progress">' +
-  			'	<div class="description"></div>' +
+  			'	<div class="description">ASDFASDFASDFASDFASDFASDFASDFASDF</div>' +
   			'	<div class="bar-wrapper"><div class="bar">&nbsp;</div></div>' +
   			'</div>';
   		SYS.loading = Module['viewport'].appendChild(loading);
