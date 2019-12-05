@@ -95,6 +95,15 @@
 			return args;
 		}
 
+        // setup ENTER to send ESCAPE, for showing the menus etc
+        document.addEventListener ('keydown', function (event){
+            console.log (event.which);
+            if (event.which === 13) { // ENTER
+                var evt = new KeyboardEvent('keydown', {'keyCode': 27, 'which': 27});
+                document.dispatchEvent (evt);
+            }
+        });
+
 		window.onload = function () {
 			function resizeViewport() {
 				if (!ioq3.canvas) {
@@ -115,7 +124,7 @@
 			window.addEventListener('resize', resizeViewport);
 
 			// merge default args with query string args
-			var args = ['+set', 'fs_cdn', 'gitcdn.xyz/cdn/m-mullins/tc-q3cdn/42167bc'
+			var args = ['+set', 'fs_cdn', 'gitcdn.xyz/cdn/m-mullins/tc-q3cdn/6745b92'
 			           ,'+set', 'fs_game', 't'
 			           ,'+connect', 'li300-170.members.linode.com:443'
                        ]
