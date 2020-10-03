@@ -123,9 +123,13 @@
 			ioq3.elementPointerLock = true;
 			window.addEventListener('resize', resizeViewport);
 
+			// generate a random name
+			const playerName = `^${Math.floor(Math.random()*10)}Player^2#^7${Math.floor(Math.random()*100)}`;
+			
 			// merge default args with query string args
-			var args = ['+set', 'fs_cdn', 'gitcdn.xyz/cdn/martinmullins/tc-q3cdn/2cad9b7'
+			var args = ['+set', 'fs_cdn', 'gitcdn.xyz/cdn/martinmullins/tc-q3cdn/d113639'
 			           ,'+set', 'fs_game', 't'
+				   ,'+seta', 'name', playerName
 			           ,'+connect', 'li300-170.members.linode.com:443'
                        ]
 
